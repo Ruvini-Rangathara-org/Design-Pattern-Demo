@@ -3,6 +3,7 @@ package org.example;
 import org.example.creational.factory.Factory;
 import org.example.creational.factory.Shape;
 import org.example.creational.singleton.SingletonDemo;
+import org.example.structural.facade.ShapeMaker;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +17,10 @@ public class Main {
         Factory factory = new Factory();
         Shape circle = factory.getShape("CIRCLE");
         circle.draw();
+
+        // Facade Design Pattern
+        ShapeMaker shapeMaker = new ShapeMaker();
+        shapeMaker.drawSquare();
 
 
     }
